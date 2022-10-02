@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import About from '../views/MainView.vue'
-import LoginView from "@/views/LoginView";
+import LoginView from "@/views/LoginViews/LoginView";
 Vue.use(VueRouter)
 
 const routes = [

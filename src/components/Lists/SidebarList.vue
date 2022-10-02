@@ -5,7 +5,9 @@
     <v-list-item
         v-for="item in items"
         :key="item.title"
+        :to="item.link"
         link
+        style="text-decoration: none;"
     >
       <v-list-item-icon>
         <v-icon>{{ item.icon }}</v-icon>
@@ -25,7 +27,8 @@ export default {
   data: () => ({
 
     items: [
-      { title: 'Home', icon: 'mdi-view-dashboard' },
+      { title: 'Home', icon: 'mdi-view-dashboard',link:'/' },
+      { title: 'Login', icon: 'mdi-login',link:'/login' },
       { title: 'Forms', icon: 'mdi-form-select' },
       { title: 'Charts', icon: 'mdi-chart-line' },
       { title: 'Alerts', icon: 'mdi-alert-octagon' },
@@ -38,6 +41,7 @@ export default {
 </script>
 
 <style scoped>
+
 .v-list{
   max-height:100vh;
   overflow-y:auto;

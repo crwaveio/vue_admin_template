@@ -1,4 +1,5 @@
-<template><div  data-app>
+<template>
+  <page-container>
 <div>
     <base-page>
       <panel-card>
@@ -59,7 +60,8 @@
 
     </base-page>
 </div>
-</div>
+  </page-container>
+
 </template>
 
 <style>
@@ -74,11 +76,13 @@ import Tab from "../components/TabComponent/TabComp";
 import StatCard from "@/components/Card/StatCard";
 import DoughnutChart from "@/components/Chart/DoughnutChart";
 import PanelCard from "@/components/Card/PanelCard";
+import PageContainer from "@/components/PageContainer";
 
 export default {
 
     name: 'AboutView',
     components: {
+      PageContainer,
       PanelCard,
       DoughnutChart,
 

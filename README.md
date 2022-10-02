@@ -19,6 +19,10 @@ npm run build
 ```
 npm run lint
 ```
+### Panel website
+```
+https://crwaveio.github.io/vue_admin_template/
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

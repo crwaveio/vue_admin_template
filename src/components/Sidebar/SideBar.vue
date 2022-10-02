@@ -98,14 +98,7 @@ export default {
       group: null,
         sidebaractive:0,
 
-        items: [
-            { title: 'Home', icon: 'mdi-view-dashboard' },
-            { title: 'Forms', icon: 'mdi-form-select' },
-            { title: 'Charts', icon: 'mdi-chart-line' },
-            { title: 'Alerts', icon: 'mdi-alert-octagon' },
-            { title: 'Datatable', icon: 'mdi-file-table' },
 
-        ],
     }),
   watch: {
     group () {

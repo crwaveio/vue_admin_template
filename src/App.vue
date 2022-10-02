@@ -10,12 +10,11 @@
 <style lang="scss">
 
 @import "//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css";
-#app{
-  background-color: #eeeeee;
-  padding-bottom: 20px;
-}
+
 .v-application--wrap {
   min-height: 0vh !important;
 }
+a { text-decoration: none; }
+
 
 </style>
