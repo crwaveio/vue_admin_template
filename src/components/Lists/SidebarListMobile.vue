@@ -2,7 +2,7 @@
 
 <SidebarList>
     <b-navbar-brand class="logo" href="#" style="padding-left: 15px;">
-      <img src="/logo.png">
+      <img src="/assets/images/logo.png">
     </b-navbar-brand>
 </SidebarList>
 

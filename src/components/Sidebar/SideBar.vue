@@ -4,7 +4,7 @@
         <div id="sidebar" @mouseenter="esidebar" @mouseleave="dsidebar">
             <div class="card sidebar-menu-item">
                 <b-navbar-brand class="logo" href="#" style="padding-left: 10px;">
-                    <img src="/logo.png">
+                  <img :src="`${publicPath}assets/images/logo.png`">
                 </b-navbar-brand>
 
                         <v-navigation-drawer
@@ -46,6 +46,44 @@
               <v-btn icon>
                 <v-icon>mdi-magnify</v-icon>
               </v-btn>
+
+              <v-menu offset-y left>
+                <template v-slot:activator="{ on: menu, attrs }">
+                    <template >
+                      <v-btn
+                          icon
+                          v-bind="attrs"
+                          v-on="{ ...menu }"
+                      >
+
+                          <v-icon>mdi-translate</v-icon>
+
+                      </v-btn>
+                    </template>
+                </template>
+                <v-list  flat>
+                  <v-list-item-group
+                      v-model="itemselected"
+                      color="primary"
+                  >
+                    <v-list-item
+
+                        v-for="(item, i) in items"
+                        :key="i"
+                        @click="changeLang(item,i)"
+                    >
+
+                      <v-list-item-content>
+                        <v-list-item-title v-text="item.title"></v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-list-item-group>
+                </v-list>
+
+              </v-menu>
+
+
+
 
               <v-btn icon>      <v-badge
                   bordered
@@ -94,12 +132,21 @@ export default {
     name: 'SideBar',
     components: {SidebarListMobile, SidebarList,CustomAvatar},
     data: () => ({
+      publicPath: process.env.BASE_URL,
+
       drawer: false,
       group: null,
         sidebaractive:0,
+        items: [
+          { title: 'English' ,langCode:'en'},
+          { title: 'Turkish' ,langCode: 'tr'}
+        ],
 
 
     }),
+
+
+
   watch: {
     group () {
       this.drawer = false
@@ -135,7 +182,11 @@ export default {
 */
 
     },
-
+  computed: {
+    itemselected () {
+      return this.$store.state.panel.langindex
+    }
+  },
     methods: {
         togglesidebar() {
 
@@ -182,7 +233,12 @@ export default {
                 contentdiv.classList.toggle("in");
 
             }
-        }
+        },
+      changeLang(item,i) {
+        this.$i18n.locale = item.langCode;
+        item.index=i;
+        this.$store.commit('panel/setLang',item);
+      }
 }
 }
 </script>

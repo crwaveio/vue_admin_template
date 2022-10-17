@@ -5,7 +5,7 @@
   <div class="container login-container">
 <div class="col-lg-5 col-md-9">
   <v-card-title class="text-center justify-center py-6">
-    <img src="/logo.png">
+    <img :src="`${publicPath}assets/images/logo.png`">
   </v-card-title>
   <v-card color="basil">
 
@@ -39,8 +39,17 @@ import LoginForm from "@/components/Forms/LoginForm";
 import RegisterForm from "@/components/Forms/RegisterForm";
 export default {
   name:"LoginView",
+  metaInfo: {
+    title: 'Login',
+    htmlAttrs: {
+      lang: 'en',
+      amp: true
+    }
+  },
   components: {RegisterForm, LoginForm, PageContainer},
   data: () => ({
+    publicPath: process.env.BASE_URL,
+
     tab: 1,
 
     items: [

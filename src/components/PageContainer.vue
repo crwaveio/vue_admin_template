@@ -1,6 +1,5 @@
 <template>
   <div  data-app  :style="{ background:this.color!=null ? this.color : '#eeeeee', minHeight: 100 + 'vh' }">
-
     <slot></slot>
   </div>
 </template>
