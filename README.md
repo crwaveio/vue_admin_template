@@ -23,6 +23,10 @@ npm run lint
 ```
 https://crwaveio.github.io/vue_admin_template/
 ```
+### If you want to contribute join discord server
+```
+https://discord.gg/JtmBYZRqvA
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -5,6 +5,7 @@ export default {
     forms:"Formlar",
     charts:"Grafikler",
     alerts:"Alarmlar",
-    datatable:"Tablolar"
+    datatable:"Tablolar",
+    components:'Bileşenler'
 
 }

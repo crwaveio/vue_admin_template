@@ -5,6 +5,7 @@ export default {
     forms:"Forms",
     charts:"Charts",
     alerts:"Alerts",
-    datatable:"Datatable"
+    datatable:"Datatable",
+    components:"Components"
 
 }

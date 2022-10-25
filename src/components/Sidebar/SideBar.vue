@@ -10,7 +10,6 @@
                         <v-navigation-drawer
                             floating
                             permanent
-
                         >
 <SidebarList></SidebarList>
                         </v-navigation-drawer>
@@ -131,19 +130,20 @@ import CustomAvatar from "@/components/Avatar/CustomAvatar";
 export default {
     name: 'SideBar',
     components: {SidebarListMobile, SidebarList,CustomAvatar},
-    data: () => ({
+
+  data: function () {
+    return {
       publicPath: process.env.BASE_URL,
 
       drawer: false,
       group: null,
-        sidebaractive:0,
-        items: [
-          { title: 'English' ,langCode:'en'},
-          { title: 'Turkish' ,langCode: 'tr'}
-        ],
-
-
-    }),
+      sidebaractive:0,
+      items: [
+        { title: 'English' ,langCode:'en'},
+        { title: 'Turkish' ,langCode: 'tr'}
+      ]
+    }
+  },
 
 
 
@@ -327,7 +327,6 @@ width: auto;
     z-index: 1;
     height:100%;
     width: 230px;
-
   float:left;padding: 10px;
     -webkit-transition: width 300ms ease;
     -moz-transition: width 300ms ease;
