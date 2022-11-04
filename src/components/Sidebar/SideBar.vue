@@ -21,10 +21,10 @@
         </div>
         </div>
 
-        <div  id="content-div">
+        <div  id="content-div" style="padding-left: 10px;padding-right: 10px;" >
 
 <div style="height:10px;"></div>
-            <v-toolbar dense rounded style="margin-left: 10px;margin-right:10px;" >
+            <v-toolbar dense rounded>
               <div class="sidebar-toggle-button"
               >
                 <v-icon
@@ -111,7 +111,7 @@
           >
 <SidebarListMobile></SidebarListMobile>
           </v-navigation-drawer>
-            <div style="padding-left: 20px;padding-right: 20px;">
+            <div>
                 <slot>
 
                 </slot>

@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from "@/views/LoginView";
 import BlankView from "@/views/BlankView";
+import FormsView from "@/views/FormsView";
+import AlertsView from "@/views/AlertsView";
+import DatatableView from "@/views/DatatableView";
+import ChartsView from "@/views/ChartsView";
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,6 +24,29 @@ const routes = [
     path: '/blank',
     name: 'blank',
     component: BlankView
+  }
+  ,
+  {
+    path: '/forms',
+    name: 'forms',
+    component: FormsView
+  }
+  ,
+  {
+    path: '/alerts',
+    name: 'alerts',
+    component: AlertsView
+  }
+  ,
+  {
+    path: '/datatable',
+    name: 'datatable',
+    component: DatatableView
+  },
+  {
+    path: '/charts',
+    name: 'charts',
+    component: ChartsView
   }
 ]
 

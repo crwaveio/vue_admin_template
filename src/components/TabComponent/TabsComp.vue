@@ -60,7 +60,7 @@ export default {
 
     this.tabs.forEach(tab => {
       //console.log(tab.componentOptions.propsData.name);
-      console.log(tab)
+      //console.log(tab)
       if(tab.child.isActive) {
 
         this.selectedtab = tab.componentOptions.propsData.name;

@@ -1,8 +1,5 @@
 <template>
-<page-container>
-  <base-page>
-  </base-page>
-</page-container>
+<div></div>
 
 
 
@@ -11,11 +8,9 @@
 </template>
 
 <script>
-import BasePage from "@/components/BasePage";
-import PageContainer from "@/components/PageContainer";
+
 export default {
   name: "BlankView",
-  components: {PageContainer, BasePage},
   metaInfo: {
     title: 'Blank',
     htmlAttrs: {

@@ -1,7 +1,5 @@
 <template>
-  <page-container>
 <div>
-    <base-page>
       <panel-card>
       <StatCard></StatCard>
       </panel-card>
@@ -58,9 +56,7 @@
 
       </div>
 
-    </base-page>
 </div>
-  </page-container>
 
 </template>
 
@@ -69,14 +65,12 @@
 
 </style>
 <script>
-import BasePage from "../components/BasePage";
 import BarChart from "../components/Chart/LineChart";
 import Tabs from "../components/TabComponent/TabsComp";
 import Tab from "../components/TabComponent/TabComp";
 import StatCard from "@/components/Card/StatCard";
 import DoughnutChart from "@/components/Chart/DoughnutChart";
 import PanelCard from "@/components/Card/PanelCard";
-import PageContainer from "@/components/PageContainer";
 
 export default {
 
@@ -89,13 +83,11 @@ export default {
     }
     },
     components: {
-      PageContainer,
       PanelCard,
       DoughnutChart,
 
       StatCard,
         BarChart,
-        BasePage,
         Tabs,
         Tab,
 

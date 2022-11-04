@@ -1,7 +1,6 @@
 <template>
   <v-list
 dense
-      v-scroll
   ><slot></slot>
 
     <v-list-item
@@ -37,6 +36,9 @@ dense
       <v-list-item
           v-for="component in components"
           :key="component.title"
+          :to="component.link"
+          style="text-decoration: none;"
+
           link
       >
         <v-list-item-icon>
@@ -73,10 +75,10 @@ export default {
 
     components(){
       var components = [
-        {title: this.$i18n.t('forms'), icon: 'mdi-form-select'},
-        {title: this.$i18n.t('charts'), icon: 'mdi-chart-line'},
-        {title: this.$i18n.t('alerts'), icon: 'mdi-alert-octagon'},
-        {title: this.$i18n.t('datatable'), icon: 'mdi-file-table'},
+        {title: this.$i18n.t('forms'), icon: 'mdi-form-select', link: '/forms'},
+        {title: this.$i18n.t('charts'), icon: 'mdi-chart-line',link: '/charts'},
+        {title: this.$i18n.t('alerts'), icon: 'mdi-alert-octagon', link: '/alerts'},
+        {title: this.$i18n.t('datatable'), icon: 'mdi-file-table',link: '/datatable'}
 
       ];
       return components;

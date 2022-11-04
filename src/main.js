@@ -23,7 +23,6 @@ Vue.use(VueI18n)
 
 import { languages } from './i18n/index.js'
 const messages = Object.assign(languages)
-console.log(store.state.panel.lang)
 var i18n = new VueI18n({
     locale:store.state.panel.lang,
     fallbackLocale: 'tr',
