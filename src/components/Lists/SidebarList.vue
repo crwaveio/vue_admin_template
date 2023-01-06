@@ -64,7 +64,6 @@ export default {
     items() {
       var items = [
         {title: this.$i18n.t('home'), icon: 'mdi-view-dashboard', link: '/'},
-        {title: this.$i18n.t('login'), icon: 'mdi-login', link: '/login'},
         {title: this.$i18n.t('blank'), icon: 'mdi-file-alert-outline', link: '/blank'},
 
 
@@ -76,9 +75,12 @@ export default {
     components(){
       var components = [
         {title: this.$i18n.t('forms'), icon: 'mdi-form-select', link: '/forms'},
+        {title: this.$i18n.t('form_elements'), icon: 'mdi-form-select', link: '/form-elements'},
         {title: this.$i18n.t('charts'), icon: 'mdi-chart-line',link: '/charts'},
         {title: this.$i18n.t('alerts'), icon: 'mdi-alert-octagon', link: '/alerts'},
-        {title: this.$i18n.t('datatable'), icon: 'mdi-file-table',link: '/datatable'}
+        {title: this.$i18n.t('datatable'), icon: 'mdi-file-table',link: '/datatable'},
+        {title: this.$i18n.t('interactive_datatable'), icon: 'mdi-file-table',link: '/interactive-datatable'},
+        {title: this.$i18n.t('interactive_datatable_paginated'), icon: 'mdi-file-table',link: '/interactive-datatable-paginated/1'}
 
       ];
       return components;

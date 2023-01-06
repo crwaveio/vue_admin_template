@@ -20,7 +20,6 @@
 
         </div>
         </div>
-
         <div  id="content-div" style="padding-left: 10px;padding-right: 10px;" >
 
 <div style="height:10px;"></div>
@@ -111,9 +110,9 @@
           >
 <SidebarListMobile></SidebarListMobile>
           </v-navigation-drawer>
-            <div>
-                <slot>
+            <div class="panel-container">
 
+              <slot>
                 </slot>
             </div>
 
@@ -244,7 +243,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+.panel-container{
+  margin-top:16px;
+}
 .v-list--rounded{
     padding: 0px;
 }

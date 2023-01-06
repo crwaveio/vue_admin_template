@@ -1,10 +1,25 @@
 export default {
     namespaced: true,
     state: {
-        user: null
+        username:"",
+        password:"",
+        logged_in:0
     },
     getters: {},
-    mutations: {},
+    mutations: {
+        auth_user(state,user) {
+            state.username = user.username;
+            state.password=user.password;
+            state.logged_in=1
+
+        },
+        logout(state){
+            state.username = '';
+            state.password='';
+            state.logged_in=0
+        }
+
+    },
     actions: {},
     modules: {}
 }

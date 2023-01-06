@@ -42,6 +42,7 @@
                   depressed
                   rounded
                   text
+                  @click="logout"
               >
                 Disconnect
               </v-btn>
@@ -63,6 +64,14 @@ export default {
       email: 'john.doe@doe.com',
     },
   }),
+  methods:{
+      logout(){
+        this.$store.commit('user/logout');
+        this.$router.push('/login');
+
+
+      }
+  }
 }
 </script>
 
